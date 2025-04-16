@@ -32,7 +32,7 @@ class CSVFormat(Base):
             reader = csv.reader(f)
             self.data = [row for row in reader]
 
-    def write(self, out_file):  # było self.filename — błąd!
+    def write(self, out_file):
         with open(out_file, 'w', encoding="utf-8", newline='') as f:
             writer = csv.writer(f)
             writer.writerows(self.data)
